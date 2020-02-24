@@ -1,12 +1,13 @@
 #!/bin/bash
 echo "Inside the root.sh script";
 
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+# install Visual Studeio Code on Ubunut and Debian based distros
 
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code # or code-insiders
+wget https://go.microsoft.com/fwlink/?LinkID=760868
+cp index.html/?LinkID=760868 code.deb
+rm index.html/?LinkID=760868 -f
+sudo apt install code.deb
+
+# setup 'Snippet Daemon' for Visual Studio Code
 
 exit 0;
