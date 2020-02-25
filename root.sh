@@ -19,7 +19,9 @@ sudo apt-get install git
 
 mkdir ~/.config/Code
 mkdir ~/.config/Code/User
-chown -hR $USER ~/.config/Code
+# sudo ./script.sh makes %USER => root 
+# chown -hR $USER ~/.config/Code
+chmod 777 -R ~/.config/Code
 cd ~/.config/Code/User
 sudo -u $USER git clone https://github.com/rahondev/vsc_snippets.git
 
