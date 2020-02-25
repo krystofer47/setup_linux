@@ -21,12 +21,12 @@ mkdir ~/.config/Code
 mkdir ~/.config/Code/User
 # sudo ./script.sh makes %USER => root 
 # chown -hR $USER ~/.config/Code
-chmod 777 -R ~/.config/Code
 cd ~/.config/Code/User
-sudo -u $USER git clone https://github.com/rahondev/vsc_snippets.git
-
-sudo -u $USER mv vsc_snippets snippets
+git clone https://github.com/rahondev/vsc_snippets.git
+mv vsc_snippets snippets
 rm vsc_snippets -rf
+# So Visual Studio Code has Write access
+chmod 777 -R ~/.config/Code
 cd snippets
 sudo ./watch.sh
 
