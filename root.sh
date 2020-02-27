@@ -13,9 +13,14 @@ sudo apt install ./code.deb
 # Check if package git is installed
 
 echo "Installing Git";
-sudo apt-get install git
+sudo apt-get install git <<< y
 git config --global user.name "Christoph Brosch"
 git config --global user.email "christoph.brosch@outlook.de"
+
+# Install curl
+
+echo "installing curl"
+sudo apt-get install curl <<< y
 
 # setup 'Snippet Daemon' for Visual Studio Code
 
